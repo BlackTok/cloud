@@ -1,4 +1,6 @@
 import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 
 public class ReadHandler implements Runnable {
     private final DataInputStream inputStream;
@@ -11,13 +13,14 @@ public class ReadHandler implements Runnable {
 
     @Override
     public void run() {
-        try {
-            while (true) {
-                String message = inputStream.readUTF();
-                callBack.call(message);
-            }
-        } catch (Exception e) {
-            System.err.println("Exception while read");
-        }
+//        try {
+//            String[] files = folder.list();
+//            for (String file : files) {
+//                callBack.call(file);
+//            }
+//        } catch (Exception e) {
+//            System.out.println(e);
+//            System.err.println("Exception while read");
+//        }
     }
 }
