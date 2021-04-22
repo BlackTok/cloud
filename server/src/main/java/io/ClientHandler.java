@@ -30,7 +30,6 @@ public class ClientHandler implements Runnable {
             while (true) {
                 String message = inputStream.readUTF();
                 System.out.println("received: " + message);
-                server.broadCast(message);
             }
         } catch (Exception e) {
             System.err.println("connection was broken");
